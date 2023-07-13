@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-next",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "preact": "^10.15.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx-development": "^7.22.5",
+    "@preact/preset-vite": "^2.5.0",
+    "babel-plugin-transform-hook-names": "^1.0.2",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.0",
+    "vite-plugin-windicss": "^1.9.0",
+    "windicss": "^3.5.6"
+  }
+}
