@@ -6,7 +6,7 @@ type WorkProps = {
     toDate: string;
     title: string;
     company: string;
-    position: string;
+    description: string;
     technologies: string[];
     hovered: boolean | null;
     onHoverStart: () => void;
@@ -36,9 +36,7 @@ const Work = (props: WorkProps) => {
                 </div>
 
                 <p className="text-slate-400 mt-3">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus perferendis cum voluptatem, 
-                    sit eveniet in exercitationem, possimus blanditiis fugit maiores enim consequuntur corporis provident, 
-                    vel officia. Praesentium qui alias laboriosam.
+                    {props.description}
                 </p>
 
                 <div className="w-fit gap-2 mt-4 flex flex-wrap">

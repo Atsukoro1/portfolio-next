@@ -16,7 +16,7 @@ const Project = (props: ProjectProps) => {
                     <img
                         src={`/projects/${props.imagePath}`}
                         alt="Project"
-                        className="rounded-lg w-[1000px] h-[150px] object-cover"
+                        className="rounded-lg w-[500px] h-[150px] object-cover"
                     />
                 </section>
 
@@ -28,11 +28,7 @@ const Project = (props: ProjectProps) => {
                         <img className="h-4 ml-2 mt-1 w-4" src="icons/link.svg" />
                     </div>
 
-                    <p className="text-slate-400 mt-3">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus perferendis cum voluptatem,
-                        sit eveniet in exercitationem, possimus blanditiis fugit maiores enim consequuntur corporis provident,
-                        vel officia. Praesentium qui alias laboriosam.
-                    </p>
+                    <p className="text-slate-400 mt-3">{props.description}</p>
 
                     <div className="w-fit gap-2 mt-4 flex flex-wrap">
                         {props.technologies.map((technology) => (

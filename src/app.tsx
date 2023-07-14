@@ -11,40 +11,50 @@ const data = {
       toDate: 'Nyní',
       title: 'Medior Web developer',
       company: 'Blindspot AI',
+      description: "",
       position: 'Frontend developer',
-      technologies: ['React', 'Next.js', 'TailwindCSS', 'TypeScript']
+      technologies: ['React', 'Next.js', 'TailwindCSS', 'TypeScript', 'Apollo', 'GraphQL']
     },
     {
       fromDate: '2022',
       toDate: '2023',
       title: 'Software engineer',
       company: 'Viceverse',
+      description: "Vyvíjel jsem zde eshopy bez použití CMS systémů. Vše bylo vyvíjeno od základu. Kromě samotného vývoje jsem byl součástí navrhování architektury a samotné údržby co se týče serverů.",
       position: 'Frontend developer',
-      technologies: ['React', 'Next.js', 'TailwindCSS']
+      technologies: ['React', 'Next.js', 'TailwindCSS', 'Typescript', "Linux", "Prisma", "PostgreSQL"]
     },
     {
       fromDate: '2021',
       toDate: '2022',
       title: 'Webmaster',
       company: 'Ovečkárna',
+      description: "Managoval jsem web Ovečkárny, který je postaven na CMS systému Silius. Nahazoval jsem nové produkty, aktualizoval jsem informace a také jsem se staral o SEO.",
       position: 'Webmaster',
-      technologies: ['Silius web panel']
+      technologies: ['Silius']
     }
   ],
   projects: [
     {
       imagePath: '/doucinfo.png',
-      title: 'Douč.info',
+      title: 'Douc.info',
       href: 'https://douc.info',
-      description: 'Douč.info je platforma pro doučování, která spojuje doučující a doučované. Douč.info je platforma pro doučování, která spojuje doučující a doučované.',
+      description: 'Douč.info je platforma pro doučování, která spojuje doučujícího a doučované kteří mají zájem dozvědět se více o právu a účetnictví.',
       technologies: ['React', 'Next.js', 'TailwindCSS', 'TypeScript', 'Stripe']
     },
     {
       imagePath: '/contalk.png',
       title: 'Meetu',
       href: 'https://douc.info',
-      description: 'Douč.info je platforma pro doučování, která spojuje doučující a doučované. Douč.info je platforma pro doučování, která spojuje doučující a doučované.',
-      technologies: ['React', 'Next.js', 'TailwindCSS', 'TypeScript', 'Stripe']
+      description: 'Meetu je Twitter klon vyvíjený v rámci finální maturitní práce na téma "Vývoj webové aplikace. Obsahuje komplexní backend s CRUD operacemi pro Tweety a real-time chat.',
+      technologies: ['React', 'Next.js', 'Prisma', 'TypeScript', 'TRPC', "TailwindCSS", "AI"]
+    },
+    {
+      imagePath: '/novazeme.png',
+      title: 'Nová země',
+      href: '',
+      description: "End-to-end šifrovaná decentralizovaná mobilní aplikace postavená pro vytváření a spravování soukromých skupin. Aplikace je soukromá, pro více informací mě kontaktujte.",
+      technologies: ["Express.JS", "Node.js", "React Native", "Tailwind CSS", "Material UI", "Typescript"]
     }
   ]
 };
@@ -63,15 +73,15 @@ export function App() {
                 Medior Web developer v Blindspot AI
               </h2>
 
-              <p className="table w-[300px] font-normal mt-2.5 text-slate-400">
-                Budu inovativní, moderní a uživatelsky přívětivé
+              <p className="table w-[310px] font-normal mt-2.5 text-slate-400">
+                Buduju inovativní, moderní a uživatelsky přívětivé
                 webové stránky a aplikace.
               </p>
 
               <nav className="hidden lg:block mt-10">
-                <NavbarItem title='O mě' onPress={() => { }} />
-                <NavbarItem title='Pracovní zkušenost' onPress={() => { }} />
-                <NavbarItem title='Projekty' onPress={() => { }} />
+                <NavbarItem title='O mě' location={0}/>
+                <NavbarItem title='Pracovní zkušenost' location={300}/>
+                <NavbarItem title='Projekty' location={1000} />
               </nav>
             </div>
 
@@ -144,12 +154,7 @@ export function App() {
                     onHoverStop={() => {
                       setHoveredWork(null);
                     }}
-                    fromDate={work.fromDate}
-                    toDate={work.toDate}
-                    title={work.title}
-                    company={work.company}
-                    position={work.position}
-                    technologies={work.technologies}
+                    {...work}
                   />
                 ))}
               </div>
