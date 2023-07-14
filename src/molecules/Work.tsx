@@ -1,3 +1,4 @@
+import { useMemo } from "preact/hooks";
 import Technology from "../atoms/Technology";
 
 type WorkProps = {
@@ -7,11 +8,20 @@ type WorkProps = {
     company: string;
     position: string;
     technologies: string[];
+    hovered: boolean | null;
+    onHoverStart: () => void;
+    onHoverStop: () => void;
 };
 
 const Work = (props: WorkProps) => {
+    const hov = useMemo(() => props.hovered, [props.hovered]);
+
     return (
-        <div className="flex group hover:cursor-pointer flex-row gap-10 p-4 border border-transparent transition-all ease-in-out transition-500 rounded-lg hover:bg-slate-200 hover:bg-opacity-[3%] hover:border-slate-600 hover:border-opacity-30">
+        <div 
+            className={`${hov === null ? "opacity-100" : (hov ? "opacity-100" : "opacity-40")} flex group hover:cursor-pointer flex-col lg:flex-row lg:gap-10 gap-4 p-4 border border-transparent transition-all ease-in-out transition-500 rounded-lg hover:bg-slate-200 hover:bg-opacity-[3%] hover:border-slate-600 hover:border-opacity-30`}
+            onMouseEnter={props.onHoverStart}
+            onMouseLeave={props.onHoverStop}
+        >
             <section>
                 <h4 className="w-[90px] text-slate-500 font-semibold text-sm">
                     {props.fromDate} - {props.toDate}
@@ -31,7 +41,7 @@ const Work = (props: WorkProps) => {
                     vel officia. Praesentium qui alias laboriosam.
                 </p>
 
-                <div className="w-[200px] mt-4">
+                <div className="w-fit gap-2 mt-4 flex flex-wrap">
                     {props.technologies.map((technology) => (
                         <Technology content={technology}/>
                     ))}
