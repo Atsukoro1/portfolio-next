@@ -60,12 +60,12 @@ export function App() {
             <div className="lg:sticky lg:top-15">
               <h1 className="text-5xl font-bold text-slate-200 tracking-tighter">Jakub Dorničák</h1>
               <h2 className="text-slate-200 text-xl mt-2 font-normal tracking-tight">
-                Medior Web developer at Blindspot AI
+                Medior Web developer v Blindspot AI
               </h2>
 
               <p className="table w-[300px] font-normal mt-2.5 text-slate-400">
-                I build accessible, inclusive products and
-                digital experiences for the web
+                Budu inovativní, moderní a uživatelsky přívětivé
+                webové stránky a aplikace.
               </p>
 
               <nav className="hidden lg:block mt-10">
@@ -156,13 +156,13 @@ export function App() {
             </div>
 
             <div>
-            <h4 className="text-slate-200 font-bold mt-8 text-lg lg:hidden">
+              <h4 className="text-slate-200 font-bold mt-8 text-lg lg:hidden">
                 Projekty
               </h4>
 
               <div className="flex flex-col gap-8 lg:mt-15">
                 {data.projects.map((project) => (
-                  <Project {...project}/>
+                  <Project {...project} />
                 ))}
               </div>
             </div>
