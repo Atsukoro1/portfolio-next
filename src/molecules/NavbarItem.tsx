@@ -1,18 +1,18 @@
 type NavbarItemProps = {
     title: string;
-    location: number
+    location: number;
 };
 
 const NavbarItem = (props: NavbarItemProps) => {
     return (
-        <div 
+        <div
             onClick={() => {
                 window.scrollTo({
                     top: props.location,
                     behavior: 'smooth'
                 });
             }} 
-            className="flex pb-1.5 hover:cursor-pointer flex-row group"
+            className="flex pb-1.5 hover:cursor-pointer flex-row group w-fit"
         >
             <div className="mt-3 duration-400  transition-all ease-in-out h-[1px] group-hover:w-15 w-8 group-hover:bg-slate-200 bg-slate-500 align-middle" />
 

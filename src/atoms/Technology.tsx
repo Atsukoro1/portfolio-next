@@ -4,7 +4,7 @@ type TechnologyProps = {
 
 const Technology = (props: TechnologyProps) => {
     return (
-        <span className="text-sky-500 bg-sky-500 bg-opacity-20 font-semibold text-[13px] p-2 rounded-full">
+        <span className="text-sky-500 bg-sky-500 bg-opacity-20 font-semibold text-[12px] p-2 rounded-full">
             {props.content}
         </span>
     )

@@ -30,12 +30,12 @@ const Work = (props: WorkProps) => {
 
             <section>
                 <div className="flex flex-row group-hover:text-sky-500 text-slate-300">
-                    <h2>{props.title}</h2>
+                    <h2 className="text-md">{props.title}</h2>
                     <span className="text-sm ml-2 mr-2">•</span>
-                    <h2>{props.company}</h2>
+                    <h2 className="text-md">{props.company}</h2>
                 </div>
 
-                <p className="text-slate-400 mt-3">
+                <p className="text-slate-400 text-sm  mt-3">
                     {props.description}
                 </p>
 

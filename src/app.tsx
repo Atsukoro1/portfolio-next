@@ -45,21 +45,22 @@ const data = {
     {
       imagePath: '/contalk.png',
       title: 'Meetu',
-      href: 'https://douc.info',
+      href: 'https://github.com/Atsukoro1/meetu',
       description: 'Meetu je Twitter klon vyvíjený v rámci finální maturitní práce na téma "Vývoj webové aplikace. Obsahuje komplexní backend s CRUD operacemi pro Tweety a real-time chat.',
       technologies: ['React', 'Next.js', 'Prisma', 'TypeScript', 'TRPC', "TailwindCSS", "AI"]
     },
     {
       imagePath: '/novazeme.png',
       title: 'Nová země',
-      href: '',
-      description: "End-to-end šifrovaná decentralizovaná mobilní aplikace postavená pro vytváření a spravování soukromých skupin. Aplikace je soukromá, pro více informací mě kontaktujte.",
+      href: null,
+      description: "End-to-end šifrovaná decentralizovaná mobilní aplikace postavená pro vytváření a spravování soukromých skupin. Aplikace není veřejná, pro více informací mě kontaktujte.",
       technologies: ["Express.JS", "Node.js", "React Native", "Tailwind CSS", "Material UI", "Typescript"]
     }
   ]
 };
 
 export function App() {
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const [hoveredWork, setHoveredWork] = useState<number | null>(null);
 
   return (
@@ -87,10 +88,10 @@ export function App() {
 
             <ul className="flex flex-row mt-5 lg:fixed lg:bottom-10 relative">
               <li className="mr-5">
-                <a href="https://www.linkedin.com/in/jakub-dorničák-4b5a3a1b9/">
+                <a href="https://github.com/Atsukoro1">
                   <img
                     src="/icons/github.svg"
-                    alt="LinkedIn"
+                    alt="Github"
                     className="w-8 h-8 hover:opacity-70 transition-opacity duration-300 ease-in-out"
                   />
                 </a>
@@ -105,10 +106,10 @@ export function App() {
                 </a>
               </li>
               <li className="mr-5">
-                <a href="https://www.linkedin.com/in/jakub-dorničák-4b5a3a1b9/">
+                <a href="https://app.hackthebox.com/users/692313">
                   <img
                     src="/icons/htb.svg"
-                    alt="LinkedIn"
+                    alt="HackTheBox"
                     className="w-8 h-8 hover:opacity-70 transition-opacity duration-300 ease-in-out"
                   />
                 </a>
@@ -143,7 +144,7 @@ export function App() {
                 Pracovní zkušenosti
               </h4>
 
-              <div className="flex flex-col gap-8 lg:mt-15">
+              <div className="flex flex-col gap-2 lg:mt-15">
                 {data.work.map((work, index) => (
                   <Work
                     hovered={hoveredWork === null ? null : hoveredWork === index}
@@ -165,9 +166,15 @@ export function App() {
                 Projekty
               </h4>
 
-              <div className="flex flex-col gap-8 lg:mt-15">
-                {data.projects.map((project) => (
-                  <Project {...project} />
+              <div className="flex flex-col gap-2 lg:mt-15">
+                {data.projects.map((project, index) => (
+                  <Project 
+                    {...project}
+                    key={project.title}
+                    onHoverStart={() => setHoveredProject(index)}
+                    onHoverStop={() => setHoveredProject(null)}
+                    hovered={hoveredProject === null ? null : hoveredProject === index} 
+                  />
                 ))}
               </div>
             </div>
