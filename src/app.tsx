@@ -3,61 +3,7 @@ import { T, TextBlock } from './atoms/Typography'
 import Work from './molecules/Work'
 import NavbarItem from './molecules/NavbarItem';
 import Project from './molecules/Project';
-
-const data = {
-  work: [
-    {
-      fromDate: '2021',
-      toDate: 'Nyní',
-      title: 'Medior Web developer',
-      company: 'Blindspot AI',
-      description: "",
-      position: 'Frontend developer',
-      technologies: ['React', 'Next.js', 'TailwindCSS', 'TypeScript', 'Apollo', 'GraphQL']
-    },
-    {
-      fromDate: '2022',
-      toDate: '2023',
-      title: 'Software engineer',
-      company: 'Viceverse',
-      description: "Vyvíjel jsem zde eshopy bez použití CMS systémů. Vše bylo vyvíjeno od základu. Kromě samotného vývoje jsem byl součástí navrhování architektury a samotné údržby co se týče serverů.",
-      position: 'Frontend developer',
-      technologies: ['React', 'Next.js', 'TailwindCSS', 'Typescript', "Linux", "Prisma", "PostgreSQL"]
-    },
-    {
-      fromDate: '2021',
-      toDate: '2022',
-      title: 'Webmaster',
-      company: 'Ovečkárna',
-      description: "Managoval jsem web Ovečkárny, který je postaven na CMS systému Silius. Nahazoval jsem nové produkty, aktualizoval jsem informace a také jsem se staral o SEO.",
-      position: 'Webmaster',
-      technologies: ['Silius']
-    }
-  ],
-  projects: [
-    {
-      imagePath: '/doucinfo.png',
-      title: 'Douc.info',
-      href: 'https://douc.info',
-      description: 'Douč.info je platforma pro doučování, která spojuje doučujícího a doučované kteří mají zájem dozvědět se více o právu a účetnictví.',
-      technologies: ['React', 'Next.js', 'TailwindCSS', 'TypeScript', 'Stripe']
-    },
-    {
-      imagePath: '/contalk.png',
-      title: 'Meetu',
-      href: 'https://github.com/Atsukoro1/meetu',
-      description: 'Meetu je Twitter klon vyvíjený v rámci finální maturitní práce na téma "Vývoj webové aplikace. Obsahuje komplexní backend s CRUD operacemi pro Tweety a real-time chat.',
-      technologies: ['React', 'Next.js', 'Prisma', 'TypeScript', 'TRPC', "TailwindCSS", "AI"]
-    },
-    {
-      imagePath: '/novazeme.png',
-      title: 'Nová země',
-      href: null,
-      description: "End-to-end šifrovaná decentralizovaná mobilní aplikace postavená pro vytváření a spravování soukromých skupin. Aplikace není veřejná, pro více informací mě kontaktujte.",
-      technologies: ["Express.JS", "Node.js", "React Native", "Tailwind CSS", "Material UI", "Typescript"]
-    }
-  ]
-};
+import data from './data.json';
 
 export function App() {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
