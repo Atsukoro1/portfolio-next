@@ -43,7 +43,7 @@ export function App() {
                 </a>
               </li>
               <li className="mr-5">
-                <a href="https://www.linkedin.com/in/jakub-dorničák-4b5a3a1b9/">
+                <a href="https://www.linkedin.com/in/jakub-dorni%C4%8D%C3%A1k-b6953423b/">
                   <img
                     src="/icons/linkedin.svg"
                     alt="LinkedIn"
