@@ -4,6 +4,7 @@ import Work from './molecules/Work'
 import NavbarItem from './molecules/NavbarItem';
 import Project from './molecules/Project';
 import data from './data.json';
+import Social from './molecules/Social';
 
 export function App() {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
@@ -34,31 +35,13 @@ export function App() {
 
             <ul className="flex flex-row mt-5 lg:fixed lg:bottom-10 relative">
               <li className="mr-5">
-                <a href="https://github.com/Atsukoro1">
-                  <img
-                    src="/icons/github.svg"
-                    alt="Github"
-                    className="w-8 h-8 hover:opacity-70 transition-opacity duration-300 ease-in-out"
-                  />
-                </a>
+                <Social href="https://github.com/Atsukoro1" src="/icons/github.svg" alt="Github" />
               </li>
               <li className="mr-5">
-                <a href="https://www.linkedin.com/in/jakub-dorni%C4%8D%C3%A1k-b6953423b/">
-                  <img
-                    src="/icons/linkedin.svg"
-                    alt="LinkedIn"
-                    className="w-8 h-8 hover:opacity-70 transition-opacity duration-300 ease-in-out"
-                  />
-                </a>
+                <Social src="/icons/linkedin.svg" alt="LinkedIn" href="https://www.linkedin.com/in/jakub-dorni%C4%8D%C3%A1k-b6953423b/" />
               </li>
               <li className="mr-5">
-                <a href="https://app.hackthebox.com/users/692313">
-                  <img
-                    src="/icons/htb.svg"
-                    alt="HackTheBox"
-                    className="w-8 h-8 hover:opacity-70 transition-opacity duration-300 ease-in-out"
-                  />
-                </a>
+                <Social src="/icons/htb.svg" alt="HackTheBox" href="https://app.hackthebox.com/users/692313" />
               </li>
             </ul>
           </section>
