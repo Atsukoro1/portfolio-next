@@ -49,8 +49,8 @@
         {
             "imagePath": "/doucinfo.png",
             "title": "Douc.info",
-            "href": "https: //douc.info",
-            "description": "Douč.info je platforma pro doučování, která spojuje doučujícího a doučované kteří mají zájem dozvědět se více o právu a účetnictví.",
+            "href": "https://douc.info",
+            "description": "Douč.info je eshop a zároven platforma pro doučování, která spojuje doučujícího a doučované kteří mají zájem dozvědět se více o právu a účetnictví. Obsahuje funkční platební systém.",
             "technologies": [
                 "React",
                 "Next.js",
@@ -62,7 +62,7 @@
         {
             "imagePath": "/contalk.png",
             "title": "Meetu",
-            "href": "https: //github.com/Atsukoro1/meetu",
+            "href": "https://github.com/Atsukoro1/meetu",
             "description": "Meetu je Twitter klon vyvíjený v rámci finální maturitní práce na téma Vývoj webové aplikace. Obsahuje komplexní backend s CRUD operacemi pro Tweety a real-time chat.",
             "technologies": [
                 "React",

@@ -26,7 +26,7 @@ const Project = (props: ProjectProps) => {
                     <img
                         src={`/projects/${props.imagePath}`}
                         alt="Project"
-                        className="rounded-lg w-[500px] h-[150px] object-cover"
+                        className="rounded-lg aspect-square object-cover w-[800px] h-[200px]"
                     />
                 </section>
 
